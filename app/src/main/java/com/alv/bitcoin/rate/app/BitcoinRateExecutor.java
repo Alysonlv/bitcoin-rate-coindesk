@@ -55,7 +55,7 @@ public class BitcoinRateExecutor {
                         .build();
             } else {
                 return new BitcoinRate.Builder()
-                        .withStatus(BitcoinRateStatus.BitcoinRateStatusCode.NOK, "Currency invalid: " + currency)
+                        .withStatus(BitcoinRateStatus.BitcoinRateStatusCode.NOK, "Currency not supported: " + currency)
                         .build();
             }
         } catch (Exception e) {
