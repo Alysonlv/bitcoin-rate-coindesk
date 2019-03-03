@@ -12,10 +12,6 @@
     <artifactId>service</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>org.immutables</groupId>
-            <artifactId>value</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.google.code.gson</groupId>
