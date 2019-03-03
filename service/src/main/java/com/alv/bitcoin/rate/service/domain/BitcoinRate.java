@@ -4,7 +4,6 @@ package com.alv.bitcoin.rate.service.domain;
  */
 
 import com.alv.bitcoin.rate.service.utils.BitcoinRateMarshaller;
-import org.apache.commons.lang3.StringUtils;
 
 import java.text.DecimalFormat;
 
@@ -106,9 +105,9 @@ public class BitcoinRate {
 
     public static void printBitcoinRate(BitcoinRate bitcoinRate) {
         if (BitcoinRateStatus.BitcoinRateStatusCode.OK == bitcoinRate.getStatus().getStatus()) {
-            System.out.println(String.format("The current Bitcoin rate, in the requested currency (%s): %s" , bitcoinRate.getBpi().getCurrency(), formatFloat(bitcoinRate.getBpi().getRate())));
-            System.out.println(String.format("The lowest Bitcoin rate in the last 30 days, in the requested currenc (%s): %s" , bitcoinRate.getBpi().getCurrency(), formatFloat(bitcoinRate.getLowesRate())));
-            System.out.println(String.format("The highest Bitcoin rate in the last 30 days, in the requested currenc (%s): %s" , bitcoinRate.getBpi().getCurrency(), formatFloat(bitcoinRate.getHighestRage())));
+            System.out.println(String.format("The current Bitcoin rate at %s, in the requested currency (%s): %s", bitcoinRate.getBpi().getDate(), bitcoinRate.getBpi().getCurrency(), formatFloat(bitcoinRate.getBpi().getRate())));
+            System.out.println(String.format("The lowest Bitcoin rate in the last 30 days, in the requested currencY (%s): %s" , bitcoinRate.getBpi().getCurrency(), formatFloat(bitcoinRate.getLowesRate())));
+            System.out.println(String.format("The highest Bitcoin rate in the last 30 days, in the requested currencY (%s): %s" , bitcoinRate.getBpi().getCurrency(), formatFloat(bitcoinRate.getHighestRage())));
         } else {
             System.out.println(bitcoinRate.getStatus().getMessage());
         }
